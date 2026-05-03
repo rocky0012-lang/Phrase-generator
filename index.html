@@ -8,10 +8,54 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.ico">
 </head>
     <body>
-       <section class="navbar">
+       <header class="navbar">
         <h1>Phrase generator</h1>
-        <p>please enter your input below</p>
-       </section> 
+       </header>
 
+       <div class="avatar-upload">
+            <div class="avatar-preview">
+                <img id="imagePreview" src="images/Phrase-M1.jpg" alt="Avatar Preview">
+            </div>
+       
+
+            <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+            <button type="button" id="upload-btn">change avatar</button>
+        </div>
+       <main>
+        <div class="detail-form">
+            <p>please enter your input below</p>
+            <form id="input-form">
+                <label for="input-name">First name</label>
+                <input type="text" id="input-name" placeholder="First name" required>
+
+                <label for="favourite-activity">Favourite activity</label>
+                <input type="text" id="favourite-activity" placeholder="Favourite activity" required>
+                
+                <label for="favouritePlace">Favourite place</label>
+                <input type="text" id="favouritePlace" placeholder="Favourite place" required>
+
+                <button type="submit" id="submit-btn">Generate Phrase</button>
+            </form>
+        </div>
+
+        <div id="loader">
+            <img id="loader-img" src="loading.gif" alt="Loading...">
+        </div>
+
+        <div class="quote-wrapper">
+            <div class="name-wrapper">
+                <span class="name-span"></span>
+            </div>
+            <div class="quote">
+                <span class="quote-span"></span>
+            </div>
+        </div>
+       </main>
+
+        <footer class="footer">
+            <p>© 2026 Phrase Generator</p>
+        </footer>
+
+        <script src="index.js"></script>
     </body>
 </html>
